@@ -17,8 +17,10 @@ type Note struct {
 }
 
 type CreateNoteRequest struct {
-	Title     string `json:"title" bson:"title" binding:"required"`
-	Content   string `json:"content" bson:"content" binding:"required"`
-	IsDeleted bool   `json:"isDeleted" bson:"isDeleted"`
-	Pinned    bool   `json:"pinned" bson:"pinned"`
+	Title     string `json:"title" binding:"required"`
+	Content   string `json:"content" binding:"required"`
+	IsDeleted bool   `json:"isDeleted"`
+	Pinned    bool   `json:"pinned"`
 }
+
+type UpdateNoteRequest map[string]any
